@@ -2,9 +2,9 @@ package com.micHon.notification;
 
 import com.micHon.order.Order;
 
-public class EmailMessage {
+public class EmailMessage implements Observer {
 
-    public void updateOrderStatus(Order order) {
+    public void update(Order order) {
         System.out.println("E-mail: Order: " + order.getOrderNumber() + "status has been changed to " + order.getOrderStatus());
     }
 }

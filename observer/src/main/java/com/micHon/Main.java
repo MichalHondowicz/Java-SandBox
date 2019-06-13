@@ -16,8 +16,13 @@ public class Main {
         EmailMessage emailMessage = new EmailMessage();
         MobileApp mobileApp = new MobileApp();
 
-        textMessage.updateOrderStatus(order);
-        emailMessage.updateOrderStatus(order);
-        mobileApp.updateOrderStatus(order);
+        order.registerObserver(textMessage);
+        order.registerObserver(emailMessage);
+        order.registerObserver(mobileApp);
+
+        order.notifyObservers();
+        order.changeOrderStatus(OrderStatus.SENT);
+        order.unregisterObserver(mobileApp);
+        order.changeOrderStatus(OrderStatus.RECEIVED);
     }
 }
