@@ -9,7 +9,7 @@ public class GameEngine implements Serializable {
     private int hp = 100;
     private String playerName = "";
 
-    private static GameEngine instance;
+    private static GameEngine instance = new GameEngine();
 
     private GameEngine() {
 
@@ -23,13 +23,6 @@ public class GameEngine implements Serializable {
 
     public static GameEngine getInstance() {
 
-        if (instance == null) {
-            synchronized (GameEngine.class) {
-                if (instance == null) {
-                    instance = new GameEngine();
-                }
-            }
-        }
         return instance;
     }
 
