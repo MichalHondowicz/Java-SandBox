@@ -33,8 +33,19 @@ public class GuessGame {
 
     private int getUserNumber() {
 
-        System.out.println(QUESTION);
-        int answer = scanner.nextInt();
+        boolean correctInput = false;
+        int answer = 0;
+
+        while (!correctInput) {
+            System.out.println(QUESTION);
+            answer = scanner.nextInt();
+            if (answer >= 0 && answer < 10) {
+                correctInput = true;
+            } else {
+                System.out.println("Only number from 0 to 9");
+            }
+        }
+
         return answer;
     }
 
