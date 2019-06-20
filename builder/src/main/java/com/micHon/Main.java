@@ -1,25 +1,16 @@
 package com.micHon;
 
-import com.micHon.buliderClassic.BigCarBuilder;
-import com.micHon.buliderClassic.Car;
-import com.micHon.buliderClassic.CarDirector;
-import com.micHon.buliderClassic.SmallCarBuilder;
+import com.micHon.airLineBuilder.FlightLeg;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        SmallCarBuilder smallCarBuilder = new SmallCarBuilder();
-        BigCarBuilder bigCarBuilder = new BigCarBuilder();
-        CarDirector smallCarDirector = new CarDirector(smallCarBuilder);
-        smallCarDirector.buildCar();
-        CarDirector bigCarDirector = new CarDirector(bigCarBuilder);
-        bigCarDirector.buildCar();
+        FlightLeg leg = new FlightLeg.FlightLogBuilder("Warsaw", "Helsinki").buildPrice("100").build();
+        FlightLeg leg1 = new FlightLeg.FlightLogBuilder("Warsaw", "Helsinki").build();
 
-        Car smallCar = smallCarDirector.getCar();
-        Car bigCar = bigCarDirector.getCar();
+        System.out.println(leg1);
+        System.out.println(leg);
 
-        System.out.println(smallCar);
-        System.out.println(bigCar);
     }
 }
