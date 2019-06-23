@@ -1,12 +1,12 @@
 package com.MicHon.abstractfactory;
 
-public class Unit  {
+public class AirUnit {
 
     private int hp;
     private int exp;
     private int damage;
 
-    protected Unit(int hp, int exp, int damage) {
+    protected AirUnit(int hp, int exp, int damage) {
         this.hp = hp;
         this.exp = exp;
         this.damage = damage;
