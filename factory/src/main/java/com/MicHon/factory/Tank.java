@@ -1,4 +1,4 @@
-package com.MicHon.units;
+package com.MicHon.factory;
 
 class Tank extends Unit{
 

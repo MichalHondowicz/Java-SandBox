@@ -1,9 +1,9 @@
 package com.MicHon;
 
-import com.MicHon.units.Factory;
-import com.MicHon.units.Unit;
-import com.MicHon.units.UnitFactory;
-import com.MicHon.units.UnitType;
+import com.MicHon.factory.Factory;
+import com.MicHon.factory.Unit;
+import com.MicHon.factory.UnitFactory;
+import com.MicHon.factory.UnitType;
 
 public class Main {
 

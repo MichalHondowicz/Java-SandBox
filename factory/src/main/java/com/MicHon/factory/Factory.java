@@ -1,4 +1,4 @@
-package com.MicHon.units;
+package com.MicHon.factory;
 
 abstract public class Factory {
 
