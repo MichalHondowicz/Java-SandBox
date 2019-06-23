@@ -2,17 +2,20 @@ package com.MicHon;
 
 
 import com.MicHon.abstractfactory.*;
+import com.MicHon.carFactory.*;
+import com.MicHon.carFactory.Factory;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Factory blueFactory = new BlueFactory();
-        Factory redFactory = new RedFactory();
+        Factory commonwealthFactory = new CommonwealthFactory();
+        Factory continentalFactory = new ContinentalFactory();
 
-        AirUnit redBomber = redFactory.createAirUnit(UnitType.BOMBER);
-        AirUnit blueBomber = blueFactory.createAirUnit(UnitType.BOMBER);
-        NavalUnit redSubmarine = redFactory.createNavalUnit(UnitType.SUBMARINE);
-        NavalUnit blueSubmarine = blueFactory.createNavalUnit(UnitType.SUBMARINE);
+        Car bmw = commonwealthFactory.createBMW(CarModel.E60);
+        Car ford = continentalFactory.createFord(CarModel.FOCUS);
+
+        System.out.println(ford.getWheelPosition());
+        System.out.println(bmw.getWheelPosition());
     }
 }
