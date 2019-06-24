@@ -6,7 +6,7 @@ public class Rifleman {
     private int y;
     private int hpLeft;
 
-    RiflemanUnitStats riflemanUnitStats;
+    private UnitStats riflemanUnitStats;
 
     public Rifleman(int x, int y) {
         riflemanUnitStats = UnitStatsRepository.getRiflemanStats();

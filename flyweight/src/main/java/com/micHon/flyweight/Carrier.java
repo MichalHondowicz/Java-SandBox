@@ -2,7 +2,7 @@ package com.micHon.flyweight;
 
 public class Carrier {
 
-    private CarrierUnitStats stats;
+    private UnitStats stats;
     private int x;
     private int y;
     private int hpLeft;
