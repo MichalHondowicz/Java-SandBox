@@ -6,12 +6,12 @@ public class Tank {
     private int y;
     private int hpLeft;
 
-    private TankUnitStats tankUnitStats;
+    private UnitStats unitStats;
 
     public Tank(int x, int y) {
-        tankUnitStats = UnitStatsRepository.getTankStats();
+        unitStats = UnitStatsRepository.getTankStats();
         this.x = x;
         this.y = y;
-        this.hpLeft = tankUnitStats.getHp();
+        this.hpLeft = unitStats.getHp();
     }
 }

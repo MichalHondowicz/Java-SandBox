@@ -1,6 +1,6 @@
 package com.micHon.flyweight;
 
-public class RiflemanUnitStats {
+public class UnitStats {
 
     private String name;
     private int hp;
@@ -8,15 +8,6 @@ public class RiflemanUnitStats {
     private int damage;
     private int speed;
     private int cost;
-
-    public RiflemanUnitStats(String name, int hp, int armor, int damage, int speed, int cost) {
-        this.name = name;
-        this.hp = hp;
-        this.armor = armor;
-        this.damage = damage;
-        this.speed = speed;
-        this.cost = cost;
-    }
 
     public String getName() {
         return name;
@@ -40,5 +31,14 @@ public class RiflemanUnitStats {
 
     public int getCost() {
         return cost;
+    }
+
+    public UnitStats(String name, int hp, int armor, int damage, int speed, int cost) {
+        this.name = name;
+        this.hp = hp;
+        this.armor = armor;
+        this.damage = damage;
+        this.speed = speed;
+        this.cost = cost;
     }
 }
