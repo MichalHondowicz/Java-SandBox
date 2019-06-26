@@ -1,8 +1,8 @@
 package com.micHon;
 
-public class Forest extends TerrainDecorator {
+public class ForestDecorator extends TerrainDecorator {
 
-    public Forest(Terrain terrain) {
+    public ForestDecorator(Terrain terrain) {
         super(terrain);
     }
 
