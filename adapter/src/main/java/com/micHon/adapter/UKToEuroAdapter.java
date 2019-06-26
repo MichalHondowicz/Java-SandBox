@@ -8,7 +8,7 @@ public class UKToEuroAdapter implements EuroDevice {
         this.device = device;
     }
 
-    public void powerOn() {
+    public void on() {
         device.powerOn();
     }
 }

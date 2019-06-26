@@ -8,16 +8,21 @@ public class Main {
 
         UKSocket ukSocket = new UKSocket();
 
-        UKDevice ukRadio = new UKDevice() {
-            public void powerOn() {
-                System.out.println("London!");
-            }
-        };
+        EuroDevice euroRadio = () -> System.out.println("Europe!");
+
+        UKDevice ukRadio = () -> System.out.println("London!");
 
         ukSocket.plugIn(ukRadio);
 
         UKToEuroAdapter adapter = new UKToEuroAdapter(ukRadio);
 
         euroSocket.plugIn(adapter);
+
+        TwoWayAdapter twoWayAdapter = new TwoWayAdapter(ukRadio, euroRadio);
+
+        euroSocket.plugIn(twoWayAdapter);
+
+        ukSocket.plugIn(twoWayAdapter);
+
     }
 }
