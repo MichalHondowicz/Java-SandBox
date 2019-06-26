@@ -12,6 +12,8 @@ public class Main {
         Terrain terrain1 = new Hill();
         Terrain terrain = new River(new Plain());
         Terrain terrain2 = new Forest(new Hill());
+        Terrain terrain3 = new River(new Forest(new Hill()));
+
         System.out.println(terrain.moveCost());
     }
 }
