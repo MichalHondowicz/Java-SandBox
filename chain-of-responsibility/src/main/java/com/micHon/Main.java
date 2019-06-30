@@ -1,16 +1,21 @@
 package com.micHon;
 
 import com.micHon.message.Message;
-import com.micHon.officer.Officer;
+import com.micHon.officer.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Message message = new Message("Attack");
-        Officer officer = new Officer();
-//        officer.setCaptain(true);
-        officer.setSergant(true);
-        officer.receiveMessage(message);
+        Message message = new Message("Attack", 40, OfficerRank.GENERAL);
+
+        Officer sergant = new Sergant();
+        Officer captain = new Captain();
+        Officer general = new General();
+
+        sergant.setSuperiorOfficer(captain);
+        captain.setSuperiorOfficer(general);
+
+        sergant.processMessage(message);
     }
 }
