@@ -1,29 +1,13 @@
 package com.micHon.templateMethod;
 
-public class StartTheClassicCar {
+public class StartTheClassicCar extends CarStartingSequence {
 
-    public void startTheCar(){
-        fastenSeatBelts();
-        startTheEngine();
-        setTheGear();
-        go();
+    public void setTheGear() {
+        System.out.println("Set Gear 1");
     }
 
-    private void go() {
-        System.out.println("Go!");
-    }
+    public void startTheEngine() {
 
-    private void setTheGear() {
-
-        System.out.println("Gears!");
-    }
-
-    private void startTheEngine() {
-
-        System.out.println("Engine!");
-    }
-
-    private void fastenSeatBelts() {
-        System.out.println("Seat Belts");
+        System.out.println("Start engine");
     }
 }
