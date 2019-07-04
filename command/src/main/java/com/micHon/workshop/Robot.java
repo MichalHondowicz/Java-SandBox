@@ -18,5 +18,4 @@ public class Robot {
         System.out.println("Robot is off");
     }
 
-
 }
