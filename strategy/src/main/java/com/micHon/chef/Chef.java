@@ -1,6 +1,6 @@
 package com.micHon.chef;
 
-import com.micHon.eggCooker.EggCooker;
+import com.micHon.egg_cooker.EggCooker;
 
 public class Chef {
 

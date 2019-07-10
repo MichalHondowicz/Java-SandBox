@@ -1,8 +1,11 @@
 package com.micHon;
 
+import com.micHon.calculator.PriceCalculator;
 import com.micHon.chef.Chef;
-import com.micHon.eggCooker.HardBoiledEggCooker;
-import com.micHon.eggCooker.SoftBoiledEggCooker;
+import com.micHon.discount_strategy.RegularPrice;
+import com.micHon.discount_strategy.SalePrice;
+import com.micHon.egg_cooker.HardBoiledEggCooker;
+import com.micHon.egg_cooker.SoftBoiledEggCooker;
 
 public class Main {
 
@@ -13,5 +16,18 @@ public class Main {
         chef.cook();
         chef.setEggCooker(new SoftBoiledEggCooker());
         chef.cook();
+
+        PriceCalculator priceCalculator = new PriceCalculator();
+        priceCalculator.setPricingStrategy(new RegularPrice());
+        priceCalculator.calculate(100, false);
+
+        priceCalculator.setPricingStrategy(new RegularPrice());
+        priceCalculator.calculate(100, true);
+
+        priceCalculator.setPricingStrategy(new SalePrice());
+        priceCalculator.calculate(100, true);
+
+        priceCalculator.setPricingStrategy(new SalePrice());
+        priceCalculator.calculate(100, false);
     }
 }
