@@ -1,14 +1,20 @@
 package com.micHon.activity;
 
-public class Gym {
+import com.micHon.visitor.Visitor;
+
+public class Gym implements Activity{
 
     private int weight;
+
+    public int getWeight() {
+        return weight;
+    }
 
     public Gym(int weight) {
         this.weight = weight;
     }
 
-    public void getCaloriesBurned() {
-        System.out.println("Calories burned at gym: " + weight * 5);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

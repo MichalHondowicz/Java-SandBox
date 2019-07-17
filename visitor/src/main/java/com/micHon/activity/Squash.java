@@ -1,6 +1,8 @@
 package com.micHon.activity;
 
-public class Squash {
+import com.micHon.visitor.Visitor;
+
+public class Squash implements Activity{
 
     private int minutesPlayed;
 
@@ -8,7 +10,11 @@ public class Squash {
         this.minutesPlayed = minutesPlayed;
     }
 
-    public void getCaloriesBurned(){
-        System.out.println("Calories burned with squash: "+ minutesPlayed*4);
+    public int getMinutesPlayed() {
+        return minutesPlayed;
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

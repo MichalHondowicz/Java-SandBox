@@ -1,6 +1,8 @@
 package com.micHon.activity;
 
-public class Treadmill {
+import com.micHon.visitor.Visitor;
+
+public class Treadmill implements Activity {
 
     private int distance;
 
@@ -8,7 +10,11 @@ public class Treadmill {
         this.distance = distance;
     }
 
-    public void getCaloriesBurned(){
-        System.out.println("Calories burned on treadmill: " + distance*2);
+    public int getDistance() {
+        return distance;
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }
