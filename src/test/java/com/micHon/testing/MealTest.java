@@ -44,4 +44,14 @@ class MealTest {
 
         assertEquals(meal1, meal2);
     }
+
+    @Test
+    void exceptionShouldBeThrownWhenDiscountBiggerThanPrice(){
+
+        Meal meal = new Meal(8, "Soup");
+
+        assertThrows(IllegalArgumentException.class, () -> meal.getDiscountPrice(40));
+    }
+
+
 }
