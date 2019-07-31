@@ -1,6 +1,8 @@
 package com.micHon.testing;
 
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -8,10 +10,20 @@ import static org.hamcrest.Matchers.*;
 
 class OrderTest {
 
+    private Order order;
+
+    @BeforeEach
+    void initializeOrder(){
+        order = new Order();
+    }
+
+    @AfterEach
+    void cleanUp(){
+        order.cancel();
+    }
+
     @Test
     void mealListShouldBeEmptyWhenOrderCreated() {
-
-        Order order = new Order();
 
         assertThat(order.getMealList(), empty());
     }
@@ -19,7 +31,6 @@ class OrderTest {
     @Test
     void addMealToOrderShouldExtendOrder(){
         Meal meal = new Meal(10, "Kebab");
-        Order order = new Order();
 
         order.addMealToOrder(meal);
 
@@ -33,7 +44,6 @@ class OrderTest {
     void removeMealFromOrderDecreaseOrderSize(){
 
         Meal meal = new Meal(10, "Kebab");
-        Order order = new Order();
 
         order.addMealToOrder(meal);
         order.removeMeal(meal);
@@ -47,7 +57,6 @@ class OrderTest {
 
         Meal meal = new Meal(10, "Kebab");
         Meal meal2 = new Meal(10, "Kebab");
-        Order order = new Order();
 
         order.addMealToOrder(meal);
         order.addMealToOrder(meal2);

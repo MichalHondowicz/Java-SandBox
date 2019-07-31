@@ -52,6 +52,4 @@ class MealTest {
 
         assertThrows(IllegalArgumentException.class, () -> meal.getDiscountPrice(40));
     }
-
-
 }

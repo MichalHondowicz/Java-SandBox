@@ -18,4 +18,8 @@ public class Order {
     public List<Meal> getMealList() {
         return mealList;
     }
+
+    void cancel(){
+        this.mealList.clear();
+    }
 }
