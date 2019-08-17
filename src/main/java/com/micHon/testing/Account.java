@@ -5,15 +5,24 @@ public class Account {
     private boolean active;
     private Address deliveryAddress;
 
+    public Account(Address deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+        if (deliveryAddress != null) {
+            activate();
+        } else {
+            this.active = false;
+        }
+    }
+
     public Account() {
         this.active = false;
     }
 
-    public void activate(){
+    public void activate() {
         this.active = true;
     }
 
-    public boolean isActive(){
+    public boolean isActive() {
         return this.active;
     }
 
