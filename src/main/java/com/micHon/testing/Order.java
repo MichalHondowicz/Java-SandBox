@@ -15,7 +15,7 @@ public class Order {
         this.mealList.remove(meal);
     }
 
-    public List<Meal> getMealList() {
+    public List<Meal> getMeals() {
         return mealList;
     }
 

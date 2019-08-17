@@ -27,7 +27,7 @@ class OrderTest {
     @Test
     void mealListShouldBeEmptyWhenOrderCreated() {
 
-        assertThat(order.getMealList(), empty());
+        assertThat(order.getMeals(), empty());
     }
 
     @Test
@@ -36,9 +36,9 @@ class OrderTest {
 
         order.addMealToOrder(meal);
 
-        assertThat(order.getMealList(), Matchers.<Meal>hasSize(1));
-        assertThat(order.getMealList(), contains(meal));
-        assertThat(order.getMealList(), hasItem(meal));
+        assertThat(order.getMeals(), Matchers.<Meal>hasSize(1));
+        assertThat(order.getMeals(), contains(meal));
+        assertThat(order.getMeals(), hasItem(meal));
 
     }
 
@@ -50,8 +50,8 @@ class OrderTest {
         order.addMealToOrder(meal);
         order.removeMeal(meal);
 
-        assertThat(order.getMealList(), hasSize(0));
-        assertThat(order.getMealList(), not(contains(meal)));
+        assertThat(order.getMeals(), hasSize(0));
+        assertThat(order.getMeals(), not(contains(meal)));
     }
 
     @Test
@@ -63,8 +63,8 @@ class OrderTest {
         order.addMealToOrder(meal);
         order.addMealToOrder(meal2);
 
-        assertThat(order.getMealList(), contains(meal,meal2));
-        assertThat(order.getMealList(), containsInAnyOrder(meal2, meal));
+        assertThat(order.getMeals(), contains(meal,meal2));
+        assertThat(order.getMeals(), containsInAnyOrder(meal2, meal));
     }
 
 
