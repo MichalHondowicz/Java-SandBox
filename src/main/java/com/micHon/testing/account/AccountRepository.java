@@ -6,5 +6,3 @@ public interface AccountRepository {
 
     List<Account> getAllAccounts();
 }
-
-
