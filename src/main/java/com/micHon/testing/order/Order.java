@@ -7,28 +7,37 @@ import java.util.List;
 
 public class Order {
 
-    private List<Meal> mealList = new ArrayList<>();
+    private OrderStatus orderStatus;
+    private List<Meal> meals = new ArrayList<>();
 
-    public void addMealToOrder(Meal meal){
-        this.mealList.add(meal);
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
     }
 
-    public  void removeMeal(Meal meal){
-        this.mealList.remove(meal);
+    public void addMealToOrder(Meal meal) {
+        this.meals.add(meal);
+    }
+
+    public void removeMeal(Meal meal) {
+        this.meals.remove(meal);
     }
 
     public List<Meal> getMeals() {
-        return mealList;
+        return meals;
     }
 
-    void cancel(){
-        this.mealList.clear();
+    void cancel() {
+        this.meals.clear();
+    }
+
+    public void changeOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
     @Override
     public String toString() {
         return "Order{" +
-                "mealList=" + mealList +
+                "mealList=" + meals +
                 '}';
     }
 }

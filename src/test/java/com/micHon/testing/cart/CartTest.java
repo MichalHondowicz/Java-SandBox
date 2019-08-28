@@ -1,5 +1,6 @@
-package com.micHon.testing;
+package com.micHon.testing.cart;
 
+import com.micHon.testing.cart.Cart;
 import com.micHon.testing.order.Order;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,6 @@
-package com.micHon.testing;
+package com.micHon.testing.cart;
 
+import com.micHon.testing.Meal;
 import com.micHon.testing.order.Order;
 
 import java.util.ArrayList;
