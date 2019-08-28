@@ -1,11 +1,11 @@
-package com.micHon.testing;
+package com.micHon.testing.extensions;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;
 
 import java.util.logging.Logger;
 
-class IAExceptionIgnoreExtension implements TestExecutionExceptionHandler {
+public class IAExceptionIgnoreExtension implements TestExecutionExceptionHandler {
 
     private static final Logger LOGGER = Logger.getLogger(IAExceptionIgnoreExtension.class.getName());
 

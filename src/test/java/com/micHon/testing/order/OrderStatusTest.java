@@ -1,5 +1,6 @@
-package com.micHon.testing;
+package com.micHon.testing.order;
 
+import com.micHon.testing.order.OrderStatus;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 

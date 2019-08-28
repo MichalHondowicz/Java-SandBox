@@ -1,13 +1,14 @@
-package com.micHon.testing;
+package com.micHon.testing.order;
 
+import com.micHon.testing.Meal;
+import com.micHon.testing.order.Order;
+import com.micHon.testing.order.OrderBackup;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class OrderBackupTest {
 

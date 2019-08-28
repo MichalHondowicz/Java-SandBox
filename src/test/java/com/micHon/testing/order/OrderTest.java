@@ -1,5 +1,8 @@
-package com.micHon.testing;
+package com.micHon.testing.order;
 
+import com.micHon.testing.Meal;
+import com.micHon.testing.extensions.BeforeAfterExtension;
+import com.micHon.testing.order.Order;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

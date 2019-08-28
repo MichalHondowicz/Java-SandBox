@@ -1,5 +1,7 @@
-package com.micHon.testing;
+package com.micHon.testing.account;
 
+import com.micHon.testing.account.Account;
+import com.micHon.testing.account.Address;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 

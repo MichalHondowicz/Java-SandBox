@@ -1,5 +1,7 @@
 package com.micHon.testing;
 
+import com.micHon.testing.extensions.IAExceptionIgnoreExtension;
+import com.micHon.testing.order.Order;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
@@ -129,12 +131,10 @@ class MealTest {
             Executable executable = () -> {
                 assertThat(calculatePrice(price, quantity), lessThan(70));
             };
-
             String name = "Test name: " + i;
             DynamicTest dynamicTest = DynamicTest.dynamicTest(name, executable);
             dynamicTests.add(dynamicTest);
         }
-
         return dynamicTests;
     }
 }

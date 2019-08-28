@@ -1,6 +1,6 @@
-package com.micHon.testing;
+package com.micHon.testing.account;
 
-public class Address {
+class Address {
 
     private String street;
     private String number;

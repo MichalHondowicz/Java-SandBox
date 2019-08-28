@@ -1,5 +1,7 @@
 package com.micHon.testing;
 
+import com.micHon.testing.order.Order;
+
 import java.util.ArrayList;
 import java.util.List;
 

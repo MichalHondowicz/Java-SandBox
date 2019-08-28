@@ -1,4 +1,4 @@
-package com.micHon.testing;
+package com.micHon.testing.order;
 
 public enum OrderStatus {
 

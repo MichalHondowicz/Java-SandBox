@@ -1,4 +1,4 @@
-package com.micHon.testing;
+package com.micHon.testing.extensions;
 
 import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;

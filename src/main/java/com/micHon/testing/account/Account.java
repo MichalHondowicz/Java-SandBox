@@ -1,6 +1,6 @@
-package com.micHon.testing;
+package com.micHon.testing.account;
 
-public class Account {
+class Account {
 
     private boolean active;
     private Address deliveryAddress;
